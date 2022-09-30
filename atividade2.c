@@ -5,7 +5,7 @@
 #include <math.h>
 #include <locale.h>
 
-//Função responsável pela conversão de (Binário -> Decimal)
+//FunÃ§Ã£o responsÃ¡vel pela conversÃ£o de (BinÃ¡rio -> Decimal)
 long long convertDB(int n) {
   long long bin2 = 0;
   int rem, i = 1;
@@ -28,16 +28,16 @@ int main(void) {
     
     setlocale(LC_ALL, "Portuguese");
 
-	/*Abre e lê o notas do programa em ling. de máquina*/
+	/*Abre e lÃª o notas do programa em ling. de mÃ¡quina*/
     FILE *notas;
     notas = fopen("registrar.txt", "r"); //busca arquivo com o nome escolhido.
     
-    /*Gerar um novo notas com os binários*/
+    /*Gerar um novo notas com os binÃ¡rios*/
     FILE *novaNota;
     novaNota = fopen("traduzido.txt", "w");
 
     if (notas == NULL || novaNota == NULL) {
-        printf("ERRO: Um dos arquivos não existe!");
+        printf("ERRO: Um dos arquivos nÃ£o existe!");
 		return 0;
 	}
 
@@ -48,7 +48,7 @@ int main(void) {
     }
 	
 	while (executando) {
-		/*Compara as instruções em char*/
+		/*Compara as instruÃ§Ãµes em char*/
 
 		if(strcpy(infos[k], "ADD")) {
 		k++;
@@ -62,7 +62,7 @@ int main(void) {
 			fprintf(novaNota, "10100");//soma
 			fprintf(novaNota, "\n%05lld", a);
 			fprintf(novaNota, "\n%05lld", b);
-			fprintf(novaNota, "\n%05lld\n", c); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", c); // variÃ¡vel de armazenamento
 		}
 		
 		if(strcpy(infos[k], "SUB")) {
@@ -76,7 +76,7 @@ int main(void) {
 			fprintf(novaNota, "11000");
 			fprintf(novaNota, "\n%05lld", a);
 			fprintf(novaNota, "\n%05lld", b);
-			fprintf(novaNota, "\n%05lld\n", c); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", c); // variÃ¡vel de armazenamento
 		}
 		
 		if(strcpy(infos[k], "MULTI")) {
@@ -90,7 +90,7 @@ int main(void) {
 			fprintf(novaNota, "10101");
 			fprintf(novaNota, "\n%05lld", a);
 			fprintf(novaNota, "\n%05lld", b);
-			fprintf(novaNota, "\n%05lld\n", c); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", c); // variÃ¡vel de armazenamento
 		}
 		
 		if(strcpy(infos[k], "DIV")) {
@@ -104,7 +104,7 @@ int main(void) {
 			fprintf(novaNota, "11100");
 			fprintf(novaNota, "\n%05lld", a);
 			fprintf(novaNota, "\n%05lld", b);
-			fprintf(novaNota, "\n%05lld\n", c); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", c); // variÃ¡vel de armazenamento
 		}
 		
 		if(strcpy(infos[k], "MED")) {
@@ -118,7 +118,7 @@ int main(void) {
 			fprintf(novaNota, "10011");
 			fprintf(novaNota, "\n%05lld", a);
 			fprintf(novaNota, "\n%05lld", b);
-			fprintf(novaNota, "\n%05lld\n", c); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", c); // variÃ¡vel de armazenamento
 		}
 		
 		if(strcpy(infos[k], "POT")) {
@@ -129,7 +129,7 @@ int main(void) {
 		k++;
 			fprintf(novaNota, "10111");
 			fprintf(novaNota, "\n%05lld", a);
-			fprintf(novaNota, "\n%05lld\n", b); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", b); // variÃ¡vel de armazenamento
 		}
 		
 		if(strcpy(infos[k], "INC")) {
@@ -140,7 +140,7 @@ int main(void) {
 		k++;
 			fprintf(novaNota, "10110");
 			fprintf(novaNota, "\n%05lld", a);
-			fprintf(novaNota, "\n%05lld\n", b); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", b); // variÃ¡vel de armazenamento
 		}
 		
 		if(strcpy(infos[k], "DEC")) {
@@ -151,7 +151,7 @@ int main(void) {
 		k++;
 			fprintf(novaNota, "11110");
 			fprintf(novaNota, "\n%05lld", a);
-			fprintf(novaNota, "\n%05lld\n", b); // variável de armazenamento
+			fprintf(novaNota, "\n%05lld\n", b); // variÃ¡vel de armazenamento
 		}
 		
 		//STOP -> encerra processo ao encontrar 11000

@@ -3,7 +3,7 @@
 #include <math.h>
 #include <locale.h>
 
-//FunÁ„o respons·vel pela convers„o de (Bin·rio -> Decimal)
+//Fun√ß√£o respons√°vel pela convers√£o de (Bin√°rio -> Decimal)
 int convertBD(int bin_aux){
     int i, dec_num = 0, rem;
     for (i = 0; bin_aux != 0; ++i){
@@ -14,7 +14,7 @@ int convertBD(int bin_aux){
     return dec_num;
 }
 
-//FunÁ„o respons·vel pela convers„o de (Decimal -> Bin·rio)
+//Fun√ß√£o respons√°vel pela convers√£o de (Decimal -> Bin√°rio)
 int convertDB(int n){
   	long long bin2 = 0;
   	int rem, i = 1;
@@ -34,16 +34,16 @@ int main(int argc, char *argv[]) {
 	
 	setlocale(LC_ALL, "Portuguese");
 	
-//vetor respons·vel pelo armazenamento dos dados
+//vetor respons√°vel pelo armazenamento dos dados
 	int memoria_num[31];
 	
-//criando documento(.txt) para inserÁ„o dos dados
+//criando documento(.txt) para inser√ß√£o dos dados
 	FILE *notas;
 	notas = fopen("traduzido.txt", "r");//mesmo nome do arquivo gerado pela atividade II
 
-//Caso o arquivo n„o exista, imprimir o erro	
+//Caso o arquivo n√£o exista, imprimir o erro	
 	if (notas == NULL) {
-        printf("ERRO: Arquivo (traduzido.txt), n„o existe!");
+        printf("ERRO: Arquivo (traduzido.txt), n√£o existe!");
 		return 0;
 	}
 //Lendo dados fornecidos pelo .txt	
@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
         pc++;
         //executando a soma
         if (RI == 10100) { 
-        	//passando dado a ser convertido em bin·rio
+        	//passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
 			
             pc++;
             
-			//passando dado a ser convertido em bin·rio          
+			//passando dado a ser convertido em bin√°rio          
             bin = memoria_num[pc];
             
             //passando dado convertido para "decimal"
@@ -83,11 +83,11 @@ int main(int argc, char *argv[]) {
             B = decimal;
            
             pc++; 
-			//fazendo a soma e guardando na prÛxima casa do vetor         
+			//fazendo a soma e guardando na pr√≥xima casa do vetor         
             memoria_num[pc] = A + B;
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;		    		    			
 		   
@@ -96,9 +96,9 @@ int main(int argc, char *argv[]) {
 		RI = memoria_num[pc];
 		pc++;
 		
-        //executando a subtraÁ„o
+        //executando a subtra√ß√£o
         if (RI == 11000) { 
-            //passando dado a ser convertido em bin·rio
+            //passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -106,7 +106,7 @@ int main(int argc, char *argv[]) {
 			
             pc++;
 			          
-            //passando dado a ser convertido em bin·rio          
+            //passando dado a ser convertido em bin√°rio          
             bin = memoria_num[pc];
             
             //passando dado convertido para "decimal"
@@ -115,11 +115,11 @@ int main(int argc, char *argv[]) {
           
             pc++; 
 			         
-            //fazendo a subtraÁ„o e guardando na prÛxima casa do vetor         
+            //fazendo a subtra√ß√£o e guardando na pr√≥xima casa do vetor         
             memoria_num[pc] = A - B;
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;		    		    			
 		   
@@ -129,9 +129,9 @@ int main(int argc, char *argv[]) {
         RI = memoria_num[pc];
         pc++;
 
-        //executando a multiplicaÁ„o
+        //executando a multiplica√ß√£o
         if (RI == 10101) { 
-           	//passando dado a ser convertido em bin·rio
+           	//passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -139,7 +139,7 @@ int main(int argc, char *argv[]) {
 			
             pc++;
 			          
-            //passando dado a ser convertido em bin·rio          
+            //passando dado a ser convertido em bin√°rio          
             bin = memoria_num[pc];
             
             //passando dado convertido para "decimal"
@@ -148,11 +148,11 @@ int main(int argc, char *argv[]) {
           
             pc++; 
 			         
-            //fazendo a multiplicaÁ„o e guardando na prÛxima casa do vetor         
+            //fazendo a multiplica√ß√£o e guardando na pr√≥xima casa do vetor         
             memoria_num[pc] = A * B;
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;		    		    			
 		   
@@ -161,9 +161,9 @@ int main(int argc, char *argv[]) {
         RI = memoria_num[pc];
         pc++;
 
-        //executando a divis„o
+        //executando a divis√£o
         if (RI == 11100) { 
-            //passando dado a ser convertido em bin·rio
+            //passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -171,7 +171,7 @@ int main(int argc, char *argv[]) {
 			
             pc++;
 			          
-            //passando dado a ser convertido em bin·rio          
+            //passando dado a ser convertido em bin√°rio          
             bin = memoria_num[pc];
             
             //passando dado convertido para "decimal"
@@ -180,11 +180,11 @@ int main(int argc, char *argv[]) {
           
             pc++; 
 			         
-            //fazendo a divis„o e guardando na prÛxima casa do vetor         
+            //fazendo a divis√£o e guardando na pr√≥xima casa do vetor         
             memoria_num[pc] = A / B;
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;		    		    			
 		   
@@ -195,7 +195,7 @@ int main(int argc, char *argv[]) {
 
     	//executando a media
         if (RI == 10011) { 
-            //passando dado a ser convertido em bin·rio
+            //passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -203,7 +203,7 @@ int main(int argc, char *argv[]) {
 			
             pc++;
 			          
-            //passando dado a ser convertido em bin·rio          
+            //passando dado a ser convertido em bin√°rio          
             bin = memoria_num[pc];
             
             //passando dado convertido para "decimal"
@@ -212,11 +212,11 @@ int main(int argc, char *argv[]) {
           
             pc++; 
 			         
-            //fazendo a mÈdia e guardando na prÛxima casa do vetor         
+            //fazendo a m√©dia e guardando na pr√≥xima casa do vetor         
             memoria_num[pc] = (A + B) / 2;
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;		    		    			
 		   
@@ -225,9 +225,9 @@ int main(int argc, char *argv[]) {
         RI = memoria_num[pc];
         pc++;
 
-        //elevando vari·vel a 2∫ potÍncia
+        //elevando vari√°vel a 2¬∫ pot√™ncia
         if (RI == 10111) { 
-            //passando dado a ser convertido em bin·rio
+            //passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -235,11 +235,11 @@ int main(int argc, char *argv[]) {
            
             pc++; 
             
-			//fazendo a potÍncia e guardando na prÛxima casa do vetor          
+			//fazendo a pot√™ncia e guardando na pr√≥xima casa do vetor          
             memoria_num[pc] = pow(A,2);
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;		    		    			
 		   
@@ -248,9 +248,9 @@ int main(int argc, char *argv[]) {
         RI = memoria_num[pc];
         pc++;
 
-        //incrementando (+1) vari·vel
+        //incrementando (+1) vari√°vel
         if (RI == 10110) { 
-            //passando dado a ser convertido em bin·rio
+            //passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -258,11 +258,11 @@ int main(int argc, char *argv[]) {
 	
             pc++;
             
-			//incrementando e guardando na prÛxima casa do vetor         
+			//incrementando e guardando na pr√≥xima casa do vetor         
             memoria_num[pc] = A + 1;
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;		    		    			
 		   
@@ -271,9 +271,9 @@ int main(int argc, char *argv[]) {
         RI = memoria_num[pc];
         pc++;
 
-        //decrementando (-1) vari·vel
+        //decrementando (-1) vari√°vel
         if (RI == 11110) { 
-            //passando dado a ser convertido em bin·rio
+            //passando dado a ser convertido em bin√°rio
         	bin = memoria_num[pc];
         	//passando dado convertido para "decimal"
             int decimal = convertBD(bin);          
@@ -281,11 +281,11 @@ int main(int argc, char *argv[]) {
 	
             pc++;
             
-			//decrementando e guardando na prÛxima casa do vetor         
+			//decrementando e guardando na pr√≥xima casa do vetor         
             memoria_num[pc] = A - 1;
             n = memoria_num[pc];
             
-            //passando de decimal para bin·rio novamente
+            //passando de decimal para bin√°rio novamente
             int binario_O = convertDB(n);
 		    memoria_num[pc] = binario_O;
 		    
